@@ -4,7 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Car, Users, MapPin, Highway } from "lucide-react";
+import { Car, Users, MapPin, Route } from "lucide-react";
 
 interface UsagePurposeStepProps {
   formData: any;
@@ -15,7 +15,7 @@ interface UsagePurposeStepProps {
 const UsagePurposeStep = ({ formData, setFormData, handleCheckboxChange }: UsagePurposeStepProps) => {
   const usageOptions = [
     { id: "city-commute", label: "City commute", icon: <Car className="h-4 w-4" /> },
-    { id: "highway-drives", label: "Long highway drives", icon: <Highway className="h-4 w-4" /> },
+    { id: "highway-drives", label: "Long highway drives", icon: <Route className="h-4 w-4" /> },
     { id: "family-trips", label: "Family trips", icon: <Users className="h-4 w-4" /> },
     { id: "occasional-use", label: "Occasional use", icon: <MapPin className="h-4 w-4" /> }
   ];
