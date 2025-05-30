@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +16,6 @@ const Dashboard = () => {
       seating: "5 Seater",
       fuel: "Petrol, Diesel",
       highlights: ["Compact Design", "Feature-rich Interior", "City-friendly Size"],
-      image: "/lovable-uploads/5c69609d-1658-47b0-bbd9-f51bc110facd.png",
       description: "Perfect urban companion with bold design and advanced connectivity features.",
       keyFeatures: ["10.25\" Touchscreen", "Wireless Charging", "UVO Connect", "LED DRLs"],
       gradient: "from-orange-400 to-pink-500"
@@ -30,7 +28,6 @@ const Dashboard = () => {
       seating: "5 Seater",
       fuel: "Petrol, Diesel",
       highlights: ["Spacious Cabin", "Tech-loaded Features", "Premium Design"],
-      image: "/lovable-uploads/5c69609d-1658-47b0-bbd9-f51bc110facd.png",
       description: "Award-winning SUV that combines style, technology, and performance seamlessly.",
       keyFeatures: ["Bose Audio", "Ventilated Seats", "360° Camera", "Smart Pure Air Purifier"],
       gradient: "from-blue-500 to-purple-600"
@@ -43,7 +40,6 @@ const Dashboard = () => {
       seating: "6/7 Seater",
       fuel: "Petrol, Diesel",
       highlights: ["Family-oriented", "Flexible Seating", "Premium Comfort"],
-      image: "/lovable-uploads/5c69609d-1658-47b0-bbd9-f51bc110facd.png",
       description: "The ultimate family vehicle with recreational vehicle design and premium comfort.",
       keyFeatures: ["3-Row Seating", "Captain Seats", "Ambient Lighting", "Premium Interiors"],
       gradient: "from-green-500 to-teal-500"
@@ -56,7 +52,6 @@ const Dashboard = () => {
       seating: "5 Seater",
       fuel: "Electric",
       highlights: ["Zero Emission", "Ultra-fast Charging", "Luxury Features"],
-      image: "/lovable-uploads/5c69609d-1658-47b0-bbd9-f51bc110facd.png",
       description: "Revolutionary electric SUV with cutting-edge technology and sustainable luxury.",
       keyFeatures: ["800V Fast Charging", "AR HUD", "Premium Sound", "Advanced ADAS"],
       gradient: "from-cyan-400 to-blue-600"
@@ -69,7 +64,6 @@ const Dashboard = () => {
       seating: "7/8/9 Seater",
       fuel: "Diesel",
       highlights: ["Premium Luxury", "Business Class Seating", "Advanced Safety"],
-      image: "/lovable-uploads/5c69609d-1658-47b0-bbd9-f51bc110facd.png",
       description: "Flagship luxury MPV designed for discerning families who demand the finest.",
       keyFeatures: ["VIP Lounge Seats", "Dual Sunroof", "Premium Audio", "Advanced Safety Suite"],
       gradient: "from-purple-500 to-indigo-600"
@@ -255,7 +249,7 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Enhanced Kia Models Grid with High-Resolution Images */}
+        {/* Enhanced Kia Models Grid without Images */}
         <div className="mb-20">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-6">
@@ -270,13 +264,10 @@ const Dashboard = () => {
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10">
             {kiaModels.map((model, index) => (
               <Card key={index} className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-6 overflow-hidden bg-white group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={model.image} 
-                    alt={`Kia ${model.name}`}
-                    className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
-                    style={{ imageRendering: 'high-quality' }}
-                  />
+                <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                  <div className={`text-6xl font-bold bg-gradient-to-r ${model.gradient} bg-clip-text text-transparent`}>
+                    KIA
+                  </div>
                   <div className="absolute top-4 right-4">
                     <Badge className={`bg-gradient-to-r ${model.gradient} text-white px-4 py-2 text-sm font-bold rounded-full shadow-xl`}>
                       {model.type}
@@ -287,7 +278,6 @@ const Dashboard = () => {
                       NEW
                     </Badge>
                   </div>
-                  <div className={`absolute inset-0 bg-gradient-to-t ${model.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
                 </div>
                 
                 <CardHeader className="pb-4">
